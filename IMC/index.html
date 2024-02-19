@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="" fr>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calcul IMC</title>
+    <link rel="icon" href="imc.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calcul <span>d'IMC</span></h1>
+      <form>
+        <div class="input-container">
+          <div class="input-group">
+            <label for="height">🪧 Votre taille en centimètres:</label>
+            <input
+              id="height"
+              type="number"
+              placeholder="Exemple: 168"
+              class="height-input"
+            />
+          </div>
+          <div class="input-group">
+            <label for="weight">⚖️ Votre poids en kilogrammes:</label>
+            <input
+              id="weight"
+              type="number"
+              placeholder="Exemple: 62"
+              class="weight-input"
+            />
+          </div>
+        </div>
+        <button>Calculer mon IMC</button>
+      </form>
+      <div class="info">
+        <p class="bmi-value">0</p>
+        <p class="result">En attente du resultat...</p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

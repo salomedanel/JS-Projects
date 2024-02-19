@@ -1,0 +1,124 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: clamp(20px, 5vw, 50px) 10px 10px; /* clamp permet de faire du responsive. 0. top(min, pref, max) 2. left/right 3. bas */
+    margin: 0;
+    align-items: center;
+}
+
+.container {
+    background-color: #f1f1f1;
+    max-width: 850px;
+    padding: 25px;
+    margin: 0 auto; /* permet d'avoir l'element centre peut importe la taille de la fenetre */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px black;
+}
+
+h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h1 span {
+    font-weight: 700;
+    color: #E6AA12;
+}
+.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.input-container input {
+    font-family: Lato, sans-serif;
+    min-width: 350px;
+    font-size: 15px;
+    font-style: italic;
+    border : none;
+    border-bottom: 1px solid #333;
+    box-shadow: 0px 5px 5px grey;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.input-group:nth-child(2) {  /* nth child = nb d'enfants */
+    margin-left: 20px;
+}
+
+form button {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    margin: 40px auto;
+    display: block;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    background-color: #E6BB12;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px grey;
+}
+
+form button:hover{
+    background-color: #E6AA12;
+}
+
+.info {
+    text-align: center;
+}
+
+.bmi-value {
+    font-size: 45px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.result {
+   font-family: "Raleway", sans-serif;
+   font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .container {
+        max-width: 600px;
+    }
+    .input-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-group:nth-child(2){
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .input-group {
+        width: 100%;
+    }
+    .input-group input {
+        width: 100%;
+        min-width: auto;
+    }
+}
