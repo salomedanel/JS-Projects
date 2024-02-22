@@ -1,0 +1,104 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(to right, #C8E2EF, #ABD7EE);
+  padding: clamp(20px, 5vw, 50px) 20px 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: #144E6C;
+}
+
+h4 {
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+}
+
+.container {
+    padding: 15px;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.question {
+    background-color: #FFF;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 2px 3px #1B6890;
+    text-align: left;
+}
+
+.question span {
+    color: #1B6890;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Raleway", sans-serif;
+}
+
+.question label {
+    padding: 10px;
+    font-size: 12px;
+}
+
+input[type="radio"] {
+  appearance: none; /* Réinitialise l'apparence par défaut */
+  -webkit-appearance: none; /* Réinitialise l'apparence par défaut pour certains navigateurs WebKit */
+  width: 15px; /* Largeur */
+  height: 15px; /* Hauteur */
+  padding: 5px;
+  border-radius: 50%; /* Pour un bouton radio rond */
+  border: 1px solid #000; /* Bordure */
+  background-color: #fff; /* Couleur de fond */
+  cursor: pointer; /* Curseur */
+  vertical-align: middle; /* Alignement vertical */
+  box-shadow: 1px 1px 1px #1B6890;
+}
+
+/* Style des boutons radio lorsqu'ils sont cochés */
+input[type="radio"]:checked {
+  background-color: #1B6890; /* Couleur de fond lorsqu'il est coché */
+}
+
+button {
+    background-color: #144E6C;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+button:hover{
+  border: 3px solid #30B903 ;
+}
+
+.result {
+    background-color: #E3ECF1;
+    padding: 15px;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="" fr>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quizz HP</title>
+    <link rel="icon" href="vifor.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>
+      <img src="vifor.png" />
+      Quizz <span>Harry Potter</span>
+      <img src="vifor.png" />
+    </h1>
+    <div class="container">
+      <form>
+        <div class="question">
+          <h4>
+            <span>⚡ Question 1 </span>En quelle annee est sorti le premier film
+            Harry Potter ?
+          </h4>
+          <div>
+            <input type="radio" value="a" id="q1_option1" name="0" checked/>
+            <label for="1997">1997</label>
+          </div>
+
+          <div>
+            <input type="radio" value="b" id="q1_option2" name="0" />
+            <label for="2001">2001</label>
+          </div>
+
+          <div>
+            <input type="radio" value="c" id="q1_option3" name="0" />
+            <label for="2003">2003</label>
+          </div>
+
+        </div>
+
+        <div class="question">
+          <h4>
+            <span>⚡ Question 2 </span>Lequel des ces sortileges n'est pas
+            impardonnable ?
+          </h4>
+          <div>
+            <input type="radio" value="a" id="q2_option1" name="1" checked/>
+            <label for="imperium">Le sortilege de l'Imperium</label>
+          </div>
+
+          <div>
+            <input type="radio" value="b" id="q2_option2" name="1"/>
+            <label for="mort">Le sortilege de la Mort</label>
+          </div>
+
+          <div>
+            <input type="radio" value="c" id="q2_option3" name="1"/>
+            <label for="doloris">Le sortilege Endoloris</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h4>
+            <span>⚡ Question 3 </span>Quel est le nom du magasin proposant de
+            nombreux modeles de chaudrons sur le Chemin de Traverse ?
+          </h4>
+          <div>
+            <input type="radio" value="a" id="q3_option1" name="2" checked/>
+            <label for="bon_chaudron">Au Bon Chaudron</label>
+          </div>
+
+          <div>
+            <input type="radio" value="b" id="q3_option2" name="2"/>
+            <label for="chaudron_cie">Chaudron & Cie</label>
+          </div>
+
+          <div>
+            <input type="radio" value="c" id="q3_option3" name="2"/>
+            <label for="chaudron_tous">Au Chaudron Pour Tous</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h4>
+            <span>⚡ Question 4 </span>Quelle equipe de Quidditch Minerva
+            McGonagal supporte-t-elle ?
+          </h4>
+          <div>
+            <input type="radio" value="a" id="q4_option1" name="3" checked/>
+            <label for="pies_montrose">Les Pies de Montrose</label>
+          </div>
+
+          <div>
+            <input type="radio" value="b" id="q4_option2" name="3"/>
+            <label for="frelons">Frelons de Wimbourne</label>
+          </div>
+
+          <div>
+            <input type="radio" value="c" id="q4_option3" name="3"/>
+            <label for="chudley">Les Canons de Chudley</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <h4>
+            <span>⚡ Question 5 </span>Laquelle de ces propositions n'est pas un
+            modele de balai volant ?
+          </h4>
+          <div>
+            <input type="radio" value="a" id="q5_option1" name="4" checked/>
+            <label for="manchevif">Manchevif</label>
+          </div>
+
+          <div>
+            <input type="radio" value="b" id="q5_option2" name="4"/>
+            <label for="pailevelue">Paillevelue</label>
+          </div>
+
+          <div>
+            <input type="radio" value="c" id="q5_option3" name="4"/>
+            <label for="comete">Comète</label>
+          </div>
+        </div>
+        <button>VALIDER ✅</button>
+      </form>
+
+      <div class="result">
+        <p class="comment">Cliquer sur valider pour voir les reponses 👀</p>
+        <p class="score"></p>
+        <p class="retry"></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
