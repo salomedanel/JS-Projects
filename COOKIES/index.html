@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="" fr>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cookies</title>
+    <link rel="icon" href="cooky.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Création de <span>Cookies </span>🍪</h1>
+    <div class="container">
+    <form>
+      <div class="input-group">
+        <label for="name">Son nom</label>
+        <input type="texte" id="name" autocomplete="off" name="name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="value">Sa valeur</label>
+        <input type="texte" id="value" autocomplete="off" name="value" required />
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="create-cookie-btn">Créer</button>
+        <button type="button" class="display-cookie-btn">Afficher</button>
+      </div>
+    </form>
+    <p class="txt-info"></p>
+    <ul class="cookie-list">
+    </ul>
+  </div>
+    <div class="toast-container"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
