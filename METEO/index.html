@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="" fr>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meteo</title>
+    <link rel="icon" href="meteo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>APP METEO 🌤️</h1>
+    <div class="container">
+      <div class="loader-container active">
+        <img src="loader.svg" alt="loader" class="loader" />
+      </div>
+      <p class="err-msg"></p>
+      <p class="city-name"></p>
+      <p class="country-name"></p>
+      <p class="temperature"></p>
+      <div class="icon-container">
+        <img src="./meteo_icons/" alt="img-meteo" class="icon" />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

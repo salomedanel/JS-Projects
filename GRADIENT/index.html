@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="" fr>
+  <head>
+    <meta charset="UTF-8" />
+    <title>UiGradient</title>
+    <link rel="icon" href="palette.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@100;200;400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-group">
+        <label for="color1">#FF5F5D</label>
+        <input type="color" id="color1" />
+      </div>
+      <div class="input-group">
+        <label for="color2">#FFC371</label>
+        <input type="color" id="color2" />
+      </div>
+      <div class="orientation">
+        <label for="orientation">
+          <span>Orientation: </span>
+          <span class="orientation-value">90°</span>
+        </label>
+        <input
+          type="range"
+          min="0"
+          max="360"
+          value="90"
+          class="slider"
+          id="orientation"
+        />
+      </div>
+      <div class="btn-container">
+        <button class="cpy-btn" type="button">Copier</button>
+        <button class="random-btn" type="button">Random</button>
+      </div>
+      <div class="msg-copy">Copié ✅</div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
