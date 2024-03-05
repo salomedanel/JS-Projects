@@ -1,24 +1,3 @@
-
-// var
-//  btn play
-//  temps travail
-//  temps repos
-//  btn restart
-//  playing = false;
-//  timeType = work;
-
-// function
-//  passingTime(timeType, playing)
-
-
-
-// on button play clicked
-//  change playing status
-//  
-//  log actual time
-//  Si timeType === 'work' tant que diff avec now < 30min -> display time ecoule chaque seconde
-//  Si timeType === 'break' tant que diff avec now < 5min -> display time ecoule chaque seconde
-
 let workingTime = 1800;
 let breakTime = 300;
 
@@ -33,32 +12,78 @@ function populateTime() {
 populateTime();
 
 function formatTime(time) {
-    const formatedTime = `${time / 60}:${time % 60 < 10 ?  `0${time % 60}` : time % 60}`;
+    const formatedTime = `${Math.trunc(time / 60)}:${time % 60 < 10 ?  `0${time % 60}` : time % 60}`;
     return (formatedTime);
 }
 
 const playBtn = document.querySelector(".play-pause");
-let playing = false;
-let timeType = 'work';
+let pause = true;
 
-playBtn.addEventListener("click", () => {
-    playing = togglePlaying(playing)
-    timeType = toggleTimeType(timeType);
-    //passingTime(playing, timeType)
-});
+playBtn.addEventListener("click", togglePomodoro);
 
-function togglePlaying(playing) {
-    console.log("Debut fonction: " + playing);
-    playing = playing ? false : true;
-    console.log("Fin fonction: " + playing);
+let currentInterval = false;
+let timerID;
+
+function togglePomodoro() {
+    handlePlayPause();
+    if (currentInterval) return;
+    currentInterval = true;
+
+    workingTime--;
+    displayWork.textContent = `${formatTime(workingTime)}`;
+    timerID = setInterval(handleTicks, 1000);
 }
 
-function toggleTimeType(timeType) {
-    console.log("Debut fonction: " + timeType);
-    if (timeType === 'work')
-        timeType = 'break';
-    console.log("Fin fonction: " + timeType);
+function handlePlayPause() {
+    if (playBtn.getAttribute("data-toggle") === "play") {
+        pause = false;
+        playBtn.setAttribute("data-toggle", "pause");
+        playBtn.firstElementChild.src = "pause.png";
+    }
+    else {
+        pause = true;
+        playBtn.setAttribute("data-toggle", "play");
+        playBtn.firstElementChild.src = "play.png";
+    }
 }
 
-// function passingTime(playing, timeType) {
-// }
+const cycles = document.querySelector(".cycles");
+let nbCycles = 0;
+
+function handleTicks() {
+    if (!pause && workingTime > 0) {
+        workingTime--;
+        displayWork.textContent = `${formatTime(workingTime)}`;
+    }
+    else if (!pause && !workingTime && breakTime > 0) {
+        breakTime--;
+        displayBreak.textContent = `${formatTime(breakTime)}`;
+    }
+    else if (!pause && !workingTime && !breakTime) {
+        workingTime = 1800 - 1;
+        breakTime = 300;
+        displayWork.textContent = `${formatTime(workingTime)}`;
+        displayBreak.textContent = `${formatTime(breakTime)}`;
+        nbCycles++;
+        cycles.textContent = `Cycles(s): ${nbCycles}`;
+    }
+}
+
+const restartBtn = document.querySelector(".restart");
+restartBtn.addEventListener("click", reset);
+
+function reset() {
+    workingTime = 1800;
+    breakTime = 300;
+
+    displayWork.textContent = `${formatTime(workingTime)}`;
+    displayBreak.textContent = `${formatTime(breakTime)}`;
+    nbCycles = 0;
+    cycles.textContent = `Cycles(s): ${nbCycles}`;
+    clearInterval(timerID);
+    currentInterval = false;
+    pause = true;
+
+    playBtn.setAttribute("data-toggle", "play");
+    playBtn.firstElementChild.src = "play.png";
+}

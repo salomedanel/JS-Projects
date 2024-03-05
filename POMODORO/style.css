@@ -72,7 +72,7 @@ h1 span {
   transform: scaleX(0);
 }
 .desc.active::after {
-  animation: loading 1s ease-out infinite;
+  animation: loading 2s ease-out infinite;
 }
 @keyframes loading {
   49% {
