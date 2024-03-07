@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="" fr>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validation Form</title>
+    <link rel="icon" href="form.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+    <h1>Inscrivez-vous</h1>
+    <form>
+
+      <div class="input-group">
+      <label for="name">Nom d'utilisateur</label>
+        <div class="icon-container">
+        <input 
+          type="text" 
+          id="name" 
+          placeholder="3 caracteres minimum"  
+          autocomplete="off">
+        <img src="check.svg" alt="icon-check" class="icon-verif">
+        <span class="error-msg">Choisissez un pseudo contenant au moins 3 caracteres.</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Entrez votre email</label>
+          <div class="icon-container">
+          <input 
+            type="email" 
+            id="email" 
+            placeholder="Votre email"  
+            autocomplete="off">
+          <img src="check.svg" alt="icon-check" class="icon-verif">
+          <span class="error-msg">Rentrez un email valide.</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Mot de passe</label>
+            <div class="icon-container">
+            <input 
+              type="password" 
+              id="password" 
+              placeholder="Votre mot de passe"  
+              autocomplete="off">
+            <img src="check.svg" alt="icon-check" class="icon-verif">
+            <span class="pswd-info">Le mot de passe doit contenir au moins un symbole, un chiffre, ainsi que 6 caracteres minimum.</span>
+            </div>
+            <div class="lines">
+              <div class="l1"><span>Faible</span></div>
+              <div class="l2"><span>Moyen</span></div>
+              <div class="l3"><span>Fort</span></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="psw-conf">Confirmez le mot de passe</label>
+              <div class="icon-container">
+              <input 
+                type="password" 
+                id="psw-conf" 
+                placeholder="Confirmez le mot de passe"  
+                autocomplete="off">
+              <img src="check.svg" alt="icon-check" class="icon-verif">
+              <span class="error-msg">Veuillez saisir un mot de passe identique au premier</span>
+              </div>
+            </div>
+
+      <button type="submit">Creation du compte</button>
+
+    </form>
+  </div>
+  <script src="app.js"></script>
+  </body>
+</html>
